@@ -22,4 +22,9 @@ public class ScoreManager : MonoBehaviour
             scoreTxt.text = "Score: " + Mathf.FloorToInt(score);
         }
     }
+
+    public void Moneda()
+    {
+        score = score + 100;
+    }
 }

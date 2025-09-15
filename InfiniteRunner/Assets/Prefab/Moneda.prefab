@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8467598414399902842}
   - component: {fileID: 302976018958804806}
   - component: {fileID: -8117428490569667920}
+  - component: {fileID: -7565446155091894712}
   m_Layer: 0
   m_Name: Moneda
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,3 +121,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   destroyXPosition: -10
+--- !u!114 &-7565446155091894712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419403942684429290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987de8ec31a7ff14b944aa4ea56d4469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
