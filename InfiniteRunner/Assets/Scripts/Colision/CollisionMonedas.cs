@@ -6,18 +6,20 @@ using UnityEngine;
 
 public class CollisionMonedas : MonoBehaviour
 {
-    public ScoreManager scoreManager;
-
-    private void Start()
+    public ScoreManager sM;
+     private void Start()
     {
-
+        if(sM == null)
+        {
+            sM = FindObjectOfType<ScoreManager>();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Jugador"))
         {
-            scoreManager.Moneda();
+            sM.Moneda();
             Destroy(gameObject);
         }
     }

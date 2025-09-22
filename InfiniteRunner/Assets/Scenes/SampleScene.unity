@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07924751, g: 0.07924751, b: 0.07924751, a: 1}
+  m_IndirectSpecularColor: {r: 0.07924743, g: 0.07924743, b: 0.07924743, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -879,6 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 7
+  secondJumpForce: 1
   crouchScale: 0.5
   crouchDuration: 1
 --- !u!54 &918404161
@@ -1085,6 +1086,7 @@ GameObject:
   - component: {fileID: 1141849373}
   - component: {fileID: 1141849372}
   - component: {fileID: 1141849371}
+  - component: {fileID: 1141849375}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1176,6 +1178,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1141849375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141849370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28972a7e888fae742a469ef1eba24faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  moveDownSpeed: 5
+  variation: 1.5
 --- !u!1 &1331576154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,6 +1327,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331576154}
   m_CullTransparentMesh: 1
+--- !u!1 &1407392012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1407392014}
+  - component: {fileID: 1407392013}
+  m_Layer: 0
+  m_Name: SpeedManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1407392013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407392012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18e67f4f1b48cb4e8ae59180961a833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: -8117428490569667920, guid: 040f32fd65a59c54a8423196faabbc05, type: 3}
+  - {fileID: 2267978576340665909, guid: 46d95e6d850fdbf44ba246fe6f8d7de7, type: 3}
+  - {fileID: -4105346292512134853, guid: bf9d2acc44354fb4690787c74a5bb532, type: 3}
+  - {fileID: 1489388856716121258, guid: c2169040c9eb41048b79bf07cfae0fce, type: 3}
+  - {fileID: 6104377004180539215, guid: ba940b870079cea4faf41db98c15d0e8, type: 3}
+  baseSpeed: 5
+--- !u!4 &1407392014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407392012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.58, y: 3.9, z: -0.00999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847702756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1509,8 @@ MonoBehaviour:
   obstacles:
   - {fileID: 5780101128848994433, guid: 46d95e6d850fdbf44ba246fe6f8d7de7, type: 3}
   - {fileID: 8471950495042566892, guid: bf9d2acc44354fb4690787c74a5bb532, type: 3}
+  - {fileID: 7753415518713083072, guid: c2169040c9eb41048b79bf07cfae0fce, type: 3}
+  - {fileID: 7014276142604808181, guid: ba940b870079cea4faf41db98c15d0e8, type: 3}
   coinPrefab: {fileID: 4419403942684429290, guid: 040f32fd65a59c54a8423196faabbc05,
     type: 3}
   spawnPoints:
@@ -1557,3 +1627,4 @@ SceneRoots:
   - {fileID: 632948241}
   - {fileID: 1141849374}
   - {fileID: 1847702759}
+  - {fileID: 1407392014}

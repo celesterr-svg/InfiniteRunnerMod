@@ -23,6 +23,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    //Ahora las monedas dan puntuacion al ser tocadas
     public void Moneda()
     {
         score = score + 100;
